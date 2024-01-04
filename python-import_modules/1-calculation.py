@@ -6,6 +6,9 @@ if __name__ == "__main__":
 a = 10
 b = 5
 
+def add(a, b):
+    return (a + b)
+
 print("{}".format(add(a, b)))
 print("{}".format(sub(a, b)))
 print("{}".format(mul(a, b)))
