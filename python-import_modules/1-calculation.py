@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    import calculator_1
+    from calculator_1 import add; sub; mul; div;
 
 a = 10
 b = 5
-
-def add(a, b):
-    return (a + b)
 
 print("{}".format(add(a, b)))
 print("{}".format(sub(a, b)))
