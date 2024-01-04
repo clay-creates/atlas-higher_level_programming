@@ -5,7 +5,7 @@ counter = 1
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("{} arguments.".format(len(sys.argv)-1), end="")
+        print("{} arguments.".format(len(sys.argv)-1))
     elif len(sys.argv) == 2:
         print("{} argument: ".format(len(sys.argv)-1))
     else:
