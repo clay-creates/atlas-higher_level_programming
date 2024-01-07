@@ -2,7 +2,7 @@
 
 def max_integer(my_list=[]):
     if my_list is None:
-        big_int = []
+        return None
 
     big_int = 0
 
