@@ -4,6 +4,7 @@
 """
 
 class Square:
+    
     """This class defines the class Square and future square objects.
     """
     pass
