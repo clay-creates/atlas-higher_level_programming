@@ -73,7 +73,7 @@ class Square:
         if len(value) != 2 or type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         for i in value:
-            if (type(i) is int and i < 0) or type(i) is not int:
+            if i < 0 or type(i) is not int:
                 raise TypeError("position must be a tuple of 2 positive integers")
 
         else:
@@ -83,14 +83,14 @@ class Square:
         """
         This is a method to print our Square using #'s
         """
-        if self.__size > 0:
+        if self.__size == 0:
+            print()
+        else:
             for _ in range(self.__position[1]):
                 print("")
             for _ in range(self.__size):
-                for _ in range(self.__position[0]):
-                    print(" ", end="")
                 for _ in range(self.__size):
                     print("#", end="")
-            print()
-        else:
-            print()
+                for _ in range(self.__position[0]):
+                    print(" ")
+                print()
