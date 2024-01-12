@@ -32,12 +32,14 @@ class Square:
         """
         return self.__size ** 2
 
+    @property
     def size(self):
         """
         This is the property getter
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         """
         This is the property setter
