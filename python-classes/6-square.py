@@ -83,9 +83,7 @@ class Square:
         """
         This is a method to print our Square using #'s
         """
-        if self.__size == 0:
-            print()
-        else:
+        if self.__size > 0:
             for _ in range(self.__position[1]):
                 print("")
             for _ in range(self.__size):
@@ -93,4 +91,6 @@ class Square:
                     print(" ", end="")
                 for _ in range(self.__size):
                     print("#", end="")
+            print()
+        else:
             print()
