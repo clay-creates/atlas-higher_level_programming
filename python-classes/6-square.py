@@ -93,4 +93,4 @@ class Square:
                     print("#", end="")
                 for _ in range(self.__position[0]):
                     print(" ")
-            print()
+                print()
