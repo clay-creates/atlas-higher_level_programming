@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+add_integer = __import__('0-add_integer').add_integer
+
+>>>add_integer(5, 5)
+10
+
+>>>add_integer(10, -5)
+5
+
+>>>add_integer(10, 5.5)
+15
+
+>>>add_integer(5, "test")
+TypeError
