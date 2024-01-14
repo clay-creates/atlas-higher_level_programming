@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 
 """
-    This module defines a class: Rectangle
+This module contains the implementation of the Rectangle class
+
+    Raises:
+        TypeError: width type must be an integer
+        ValueError: width value must be positive
+        TypeError: height type must be an integer
+        ValueError: height value must be positive
+
+    Returns:
+        Rectangle: returns an instance or instances of Rectangle
 """
 
 
