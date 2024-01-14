@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This module contains the add_integer method    
+This module contains the add_integer method
 """
+
+
 def add_integer(a, b=98):
     """
     This method adds two integers together. If given a float,
