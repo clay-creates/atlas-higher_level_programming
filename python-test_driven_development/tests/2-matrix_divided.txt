@@ -1,0 +1,6 @@
+import doctest
+doctest.filetest("2-matrix_divided.txt")
+
+    try import from module:
+        >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
