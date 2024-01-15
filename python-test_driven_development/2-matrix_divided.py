@@ -38,7 +38,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
 
     for row in matrix:
-        for i in row:
-            new_matrix += round(range(matrix[i]) / div, 2)
+        for i in range(len(row)):
+            new_matrix += round(matrix[i] / div, 2)
 
     return new_matrix
