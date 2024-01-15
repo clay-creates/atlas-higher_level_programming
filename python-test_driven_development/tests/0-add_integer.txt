@@ -26,10 +26,10 @@ doctest.testfile("0-add_integer.txt")
         TypeError: b must be an integer
 
     try passing float overflow:
-        >>> add_integer(.96969696, .6969696696969)
-        1
+        >>> add_integer(5.000000000000001, 5)
+        10
 
     try passing float NaN:
-        >>> add_integer(1, NaN(4.5))
+        >>> add_integer(1, float(NaN))
         Traceback (most recent call last):
         ValueError: cannot convert float NaN to integer
