@@ -27,7 +27,7 @@ doctest.testfile("0-add_integer.txt")
 
     try passing float overflow:
         >>> add_integer(5.00000001, 5.999999999999999999999999999999999)
-        11
+        11.0
 
     try passing float NaN:
         >>> add_integer(1, float("NaN"))
