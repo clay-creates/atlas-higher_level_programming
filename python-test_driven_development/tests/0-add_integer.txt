@@ -4,23 +4,32 @@ doctest.testfile("0-add_integer.txt")
     try import function from module:
         >>> add_integer = __import__('0-add_integer').add_integer
 
-    try testing regular addition:
+    try passing expected:
         >>> add_integer(5, 5)
         10
 
-    try method with negative number:
+    try passing negative number:
         >>> add_integer(10, -5)
         5
 
-    try method without second argument:
+    try passing only a:
         >>> add_integer(2)
         100
 
-    try method with float:
+    try passing float:
         >>> add_integer(10, 5.5)
         15
 
-    try method with string instead of int:
+    try passing string:
         >>> add_integer(5, "test")
         Traceback (most recent call last):
         TypeError: b must be an integer
+
+    try passing float overflow:
+        >>> add_integer(.96969696, .6969696696969)
+        1
+
+    try passing float NaN:
+        >>> add_integer(1, NaN(4.5))
+        Traceback (most recent call last):
+        ValueError: cannot convert float NaN to integer
