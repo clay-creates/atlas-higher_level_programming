@@ -48,6 +48,12 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([-1, -2, -3, -4, -5]), -1)
 
+    def test_single(self):
+        """
+        Test case for list of one element
+        """
+        self.assertEqual(max_integer([5]), 5)
+
     def test_none(self):
         """
         Test case of empty list
