@@ -17,6 +17,7 @@ doctest.filetest("5-text_indentation.txt")
 
     try passing blank string:
         >>> text_indentation("")
-        <BLANKLINE>
+    
+    
 
     
