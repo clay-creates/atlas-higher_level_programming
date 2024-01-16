@@ -12,4 +12,7 @@ def print_square(size):
     elif size < 0:
         raise ValueError("size mist be >= 0")
 
-    print("{}".format("#") for i in size for row in size)
+    for i in range(size):
+        for j in range(size):
+            print("#", end="")
+        print()
