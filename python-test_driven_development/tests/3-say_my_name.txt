@@ -6,14 +6,14 @@ doctest.filetest("3-say_my_name.txt")
 
     try passing expected:
         >>> say_my_name("Dr. Evelyn", "Lasagna")
-        Dr. Evelyn Lasagna
+        My name is Dr. Evelyn Lasagna
 
-    try passing not string last_name:
+    try passing non-string last_name:
         >>> say_my_name("Shasta", 69)
         Traceback (most recent call last):
         TypeError: last_name must be a string
     
-    try passing not string first_name:
+    try passing non-string first_name:
         >>> say_my_name(69, "Shasta")
         Traceback (most recent call last)
         TypeError: first_name must be a string
@@ -22,4 +22,3 @@ doctest.filetest("3-say_my_name.txt")
         >>> say_my_name()
         Traceback (most recent call last)
         TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-        
