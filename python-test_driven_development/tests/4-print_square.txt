@@ -1,0 +1,12 @@
+import doctest
+doctest.filetest("4-print_square.txt")
+
+    try import from module:
+        >>> print_square = __import__('4-print_square').print_square
+
+    try passing expected:
+        >>> print_square(2)
+        ##
+        ##
+
+    
