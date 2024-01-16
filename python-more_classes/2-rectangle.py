@@ -106,7 +106,7 @@ class Rectangle:
         """
         Public method that returns rectangle perimeter
         """
-        if self.height or self.width == 0:
+        if self.height == 0 or self.width == 0:
             return 0
         else:
             return (self.height + self.width) * 2
