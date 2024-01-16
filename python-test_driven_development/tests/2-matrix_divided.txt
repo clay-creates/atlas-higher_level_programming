@@ -42,9 +42,10 @@ doctest.filetest("2-matrix_divided.txt")
 
     try passing with missing argument:
         >>> matrix_divided([[10, 20], [30, 40]])
-        [[10, 20], [30, 40]]
+        Traceback (most recent call last):
+        TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
     try passing empty method:
         >>> matrix_divided()
         Traceback (most recent call last):
-        TypeError: matrix_divided() missing 2 required positional arguments
+        TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
