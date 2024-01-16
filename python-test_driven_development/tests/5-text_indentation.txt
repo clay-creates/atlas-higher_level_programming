@@ -1,0 +1,12 @@
+import doctest
+doctest.filetest("5-text_indentation.txt")
+
+    try import from module:
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    try passing expected:
+        >>> text_indentation("There once was a man named Michael Finnegan.")
+        There once was a man named Michael Finnegan.
+        :
+        :
+        
