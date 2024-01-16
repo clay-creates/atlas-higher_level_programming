@@ -7,6 +7,16 @@ doctest.filetest("5-text_indentation.txt")
     try passing expected:
         >>> text_indentation("There once was a man named Michael Finnegan.")
         There once was a man named Michael Finnegan.
-        :
-        :
-        
+        <BLANKLINE>
+        <BLANKLINE>
+    
+    try passing non-string:
+        >>> text_indentation(8675309)
+        Traceback (most recent call last):
+        TypeError: text must be a string
+
+    try passing blank string:
+        >>> text_indentation("")
+        <BLANKLINE>
+
+    
