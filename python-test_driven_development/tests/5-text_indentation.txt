@@ -8,7 +8,6 @@ doctest.filetest("5-text_indentation.txt")
         >>> text_indentation("There once was a man named Michael Finnegan.")
         There once was a man named Michael Finnegan.
         <BLANKLINE>
-        <BLANKLINE>
     
     try passing non-string:
         >>> text_indentation(8675309)
@@ -17,7 +16,3 @@ doctest.filetest("5-text_indentation.txt")
 
     try passing blank string:
         >>> text_indentation("")
-    
-    
-
-    
