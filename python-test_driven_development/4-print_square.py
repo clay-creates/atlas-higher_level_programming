@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module defines a method Print_Square
+This module defines a method print_square
 """
 
 
