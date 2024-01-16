@@ -4,3 +4,42 @@ doctest.filetest("2-matrix_divided.txt")
     try import from module:
         >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
+    try passing expected:
+        >>> matrix_divided([[10, 20], [30, 40]], 10)
+        [[1, 2], [3, 4]]
+
+    try passing string as div:
+        >>> matrix_divided([[10, 20], [30, 40]], "test")
+        Traceback (most recent call last):
+        TypeError: div must be a number
+
+    try passing 0 as div:
+        >>> matrix_divided([[10, 20], [30, 40]], 0)
+        Traceback (most recent call last):
+        ZeroDivisionError: division by zero
+
+    try passing list of non-integers:
+        >>> matrix_divided([["test", "this"], [30, 40]], 10)
+        Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    try passing uneven matrix:
+        >>> matrix_divided([[10, 20], [30, 40, 50]], 10)
+        Traceback (most recent call last):
+        TypeError: matrix must have each row with the same size
+
+    try passing float(inf) as div:
+        >>> matrix_divided([[10, 20], [30, 40]], float(inf))
+        [[0.0, 0.0], [0.0, 0.0]]
+
+    try passing matrix with one float(inf/nan):
+        >>> matrix_divided()
+
+    try passing matrix with one float(inf/nan) AND float(inf/nan) as div:
+        >>> matrix_divided()
+
+    try passing with missing argument:
+        >>> matrix_divided()
+
+    try passing empty method:
+        >>> matrix_divided()
