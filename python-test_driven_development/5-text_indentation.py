@@ -9,8 +9,8 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     
-    for char in len(range(text)):
-        if text[char] == ['.', '?', ':']:
+    for char in range(text):
+        if char == ['.', '?', ':']:
             print("\n")
         print(char, end="")
         
