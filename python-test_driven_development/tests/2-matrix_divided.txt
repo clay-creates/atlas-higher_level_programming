@@ -38,7 +38,7 @@ doctest.filetest("2-matrix_divided.txt")
 
     try passing matrix with one float(inf/nan) AND float(inf/nan) as div:
         >>> matrix_divided([[10, float('inf')], [30, 40]], float('inf'))
-        [[1.0, nan], [3.0, 4.0]]
+        [[0.0, nan], [0.0, 0.0]]
 
     try passing with missing argument:
         >>> matrix_divided([[10, 20], [30, 40]])
