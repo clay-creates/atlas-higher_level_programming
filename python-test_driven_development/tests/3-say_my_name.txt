@@ -1,0 +1,8 @@
+import doctest
+doctest.filetest("3-say_my_name.txt")
+
+    try import from module:
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    try passing expected:
+        >>> say_my_name()
