@@ -32,7 +32,11 @@ def matrix_divided(matrix, div):
     if (not isinstance(matrix, list) or
         not all(isinstance(row, list) for row in matrix)):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
+    #Check elements in matrix
+    elif not all(isinstance(i, (int, float))
+               for row in matrix for i in row):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    
     #Check if rows in matrix are the same size
     if any(len(row) != len(matrix[0]) for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
