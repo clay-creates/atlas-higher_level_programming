@@ -9,12 +9,12 @@ doctest.filetest("3-say_my_name.txt")
         My name is Dr. Evelyn Lasagna
 
     try passing non-string last_name:
-        >>> say_my_name("Shasta", "69")
+        >>> say_my_name("Shasta", 69)
         Traceback (most recent call last):
         TypeError: last_name must be a string
     
     try passing non-string first_name:
-        >>> say_my_name("69", "Shasta")
+        >>> say_my_name(69, "Shasta")
         Traceback (most recent call last)
         TypeError: first_name must be a string
 
