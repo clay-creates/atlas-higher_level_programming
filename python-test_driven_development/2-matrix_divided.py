@@ -33,11 +33,11 @@ def matrix_divided(matrix, div):
 
     # Check if matrix is a list of lists, check elements in matrix
     if (not isinstance(matrix, list) or
-        not all(isinstance(row, list) for row in matrix)):
-            raise TypeError(matrix_err)
+     not all(isinstance(row, list) for row in matrix)):
+        raise TypeError(matrix_err)
     elif not all(isinstance(i, (int, float))
-        for row in matrix for i in row):
-            raise TypeError(matrix_err)
+     for row in matrix for i in row):
+        raise TypeError(matrix_err)
 
     # Check if rows in matrix are the same size
     if any(len(row) != len(matrix[0]) for row in matrix):
