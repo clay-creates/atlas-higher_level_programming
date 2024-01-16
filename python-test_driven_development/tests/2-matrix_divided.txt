@@ -33,13 +33,18 @@ doctest.filetest("2-matrix_divided.txt")
         [[0.0, 0.0], [0.0, 0.0]]
 
     try passing matrix with one float(inf/nan):
-        >>> matrix_divided()
+        >>> matrix_divided([[10, float('inf')], [30, 40]], 10)
+        [[1.0, 0.0], [3.0, 4.0]]
 
     try passing matrix with one float(inf/nan) AND float(inf/nan) as div:
-        >>> matrix_divided()
+        >>> matrix_divided([[10, float('inf')], [30, 40]], float('inf'))
+        [[nan, nan], [nan, nan]]
 
     try passing with missing argument:
-        >>> matrix_divided()
+        >>> matrix_divided([[10, 20], [30, 40]])
+        [[10, 20], [30, 40]]
 
     try passing empty method:
         >>> matrix_divided()
+        Traceback (most recent call last):
+        TypeError: matrix_divided() missing 2 required positional arguments
