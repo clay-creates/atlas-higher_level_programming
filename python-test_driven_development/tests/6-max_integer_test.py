@@ -40,7 +40,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         Test case for a single negative integer in list
         """
-        self.assertEqual(max_integer([]))
+        self.assertEqual(max_integer([-1, 2, 3, 4, 5]), 5)
 
     def test_all_negative(self):
         """
