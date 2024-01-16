@@ -20,6 +20,6 @@ def text_indentation(text):
 
     for char in text:
         if char in ['.', '?', ':']:
-            text = text.replace(char, char +"\n\n")
+            text = text.replace(char, char + "\n\n")
 
-    print("{}".format(text))
+    print("{}".format(text, end=""))
