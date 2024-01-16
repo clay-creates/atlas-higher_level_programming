@@ -4,6 +4,7 @@
 This module contains the say_my_name method
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Method to print out both first name and last name given
