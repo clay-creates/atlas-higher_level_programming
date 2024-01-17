@@ -39,10 +39,12 @@ class Rectangle:
         self.__height = height
 
     def __str__(self):
+        result = ""
         for i in range(self.height):
             for j in range(self.width):
-                print("#", end="")
-            print()
+                result += "#"
+            result += "\n"
+        return result
 
     @property
     def width(self):
