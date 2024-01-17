@@ -38,6 +38,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = height
 
+    def __str__(self):
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print()
+
     @property
     def width(self):
         """
