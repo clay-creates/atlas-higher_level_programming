@@ -19,7 +19,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         """
         Initialization module for instances of Rectangle
@@ -29,7 +29,7 @@ class Rectangle:
             height (int): height of the rectangle
         """
         type(self).number_of_instances += 1
-        
+
         if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width < 0:
