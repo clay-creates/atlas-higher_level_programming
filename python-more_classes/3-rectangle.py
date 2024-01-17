@@ -41,7 +41,6 @@ class Rectangle:
     def __str__(self):
         result = ""
         if self.height == 0:
-            result += "\n"
             return result
         else:
             for i in range(self.height):
