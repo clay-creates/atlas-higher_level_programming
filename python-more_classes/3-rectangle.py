@@ -43,6 +43,8 @@ class Rectangle:
         for i in range(self.height):
             for j in range(self.width):
                 result += "#"
+            if i != self.height - 1:
+                result += "\n"
         return result
 
     @property
