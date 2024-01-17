@@ -40,12 +40,16 @@ class Rectangle:
 
     def __str__(self):
         result = ""
-        for i in range(self.height):
-            for j in range(self.width):
-                result += "#"
-            if i != self.height - 1:
-                result += "\n"
-        return result
+        if self.height == 0:
+            result += "\n"
+            return result
+        else:
+            for i in range(self.height):
+                for j in range(self.width):
+                    result += "#"
+                if i != self.height - 1:
+                    result += "\n"
+            return result
 
     @property
     def width(self):
