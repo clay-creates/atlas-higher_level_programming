@@ -15,7 +15,7 @@ def is_kind_of_class(obj, a_class):
     Returns:
         Bool: returns true if is same class/subclass, false otherwise
     """
-    if isinstance (obj, a_class):
+    if isinstance(obj, a_class):
         return True
     else:
         return False
