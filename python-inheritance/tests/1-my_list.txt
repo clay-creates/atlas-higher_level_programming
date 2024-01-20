@@ -1,0 +1,55 @@
+import doctest
+doctest.testfile('1-my_list.txt')
+
+import from module:
+    >>> MyList = __import__('1-my_list').MyList
+
+check instantiation:
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list
+    [1, 2, 3]
+
+check inheritance from list:
+    >>> my_list = MyList([1, 2, 3])
+    >>> isinstance(my_list, list)
+    True
+
+check __str__:
+    >>> my_list = MyList([1, 2, 3])
+    >>> str(my_list)
+    '[1, 2, 3]'
+
+check append():
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(4)
+    [1, 2, 3, 4]
+
+check print_sorted() with sorted append:
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(4)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4]
+
+check print_sorted() with unsorted append:
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(4)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4]
+
+check print_sorted() with unsorted and negative int:
+    >>> my_list = MyList([1, 2, 3])
+    >>> my_list.append(-1)
+    >>> my_list.print_sorted()
+    [-1, 1, 2, 3]
+
+check print_sorted() with empty list:
+    >>> my_list = MyList([])
+    >>> my_list.print_sorted()
+    []
+
+check print_sorted() return new list:
+    >>> sorted_list = my_list.print_sorted()
+    >>> my_list = MyList([])
+    >>> sorted_list is my_list
+    False
+    
