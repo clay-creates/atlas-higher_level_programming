@@ -16,5 +16,4 @@ class MyList(list):
         """
         Method to print sorted list
         """
-        self.sort()
-        print(self)
+        print(sorted(self))
