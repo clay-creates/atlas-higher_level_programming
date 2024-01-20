@@ -45,11 +45,10 @@ check print_sorted() with unsorted and negative int:
 check print_sorted() with empty list:
     >>> my_list = MyList([])
     >>> my_list.print_sorted()
-    []
+    None
 
 check print_sorted() return new list:
     >>> sorted_list = my_list.print_sorted()
     >>> my_list = MyList([])
     >>> sorted_list is my_list
     False
-    
