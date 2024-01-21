@@ -2,9 +2,7 @@ import doctest
 doctest.testfile('7-base_geometry.txt')
 
 import from module:
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-bg = BaseGeometry()
+    >>> bg = __import__('7-base_geometry').BaseGeometry
 
 check instantiation:
     >>> isinstance(bg, BaseGeometry)
@@ -62,4 +60,3 @@ test integer_validator("age", {3, 4}):
 test integer_validator("age", None):
     >>> bg.integer_validator("age", None)
     False
-    
