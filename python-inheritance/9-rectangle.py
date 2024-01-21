@@ -37,4 +37,4 @@ class Rectangle(BaseGeometry):
         """
         Magic method to print the representation of Rectangle
         """
-        print("[Square] {}/{}".format(self.__width, self.__height))
+        print("[Rectangle] {}/{}".format(self.__width, self.__height))
