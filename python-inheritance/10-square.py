@@ -4,7 +4,6 @@ This module holds an instance of the Square subclass inheriting fro Rectangle
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
-
 class Square(Rectangle):
     """
     Square class inheriting from Rectangle -> BaseGeometry
