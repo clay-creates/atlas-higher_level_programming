@@ -6,6 +6,7 @@ This module holds subclass Rectangle inheriting from BaseGeometry
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     Class inheriting from BaseGeometry: Rectangle
@@ -36,4 +37,4 @@ class Rectangle(BaseGeometry):
         """
         Magic method to print the representation of Rectangle
         """
-        print("[Rectangle] {}/{}".format(self.width, self.__height))
+        print("[Rectangle] {}/{}".format(self.__width, self.__height))
