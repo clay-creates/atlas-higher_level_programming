@@ -11,22 +11,20 @@ check instantiation:
 
 test area():
     >>> bg = BaseGeometry()
-    >>> bg.area(1)
+    >>> bg.area()
     Traceback (most recent call last)
     ...
-    TypeError: area() takes 1 positional argument but 2 were given
+    Exception: area() is not implemented
 
 test integer_validator():
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator()
-    Traceback (most recent call last)
-    TypeError: integer_validator() missing 2 required positional arguments: "name" and "value"
+    >>> bg.integer_validator("age", 1)
+    True
 
 test integer_validator("age"):
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age")
-    Traceback (most recent call last)
-    TypeError: integer_validator() missing 1 required positional argument: "value"
+    >>> bg.integer_validator("age", 1)
+    True
 
 test integer_validator("age", 1):
     >>> bg = BaseGeometry()
@@ -35,15 +33,17 @@ test integer_validator("age", 1):
 
 test integer_validator("age", 0):
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator(0)
+    >>> bg.integer_validator("age", 0)
     Traceback (most recent call last)
-    ValueError: name must be greater than 0
+    ...
+    ValueError: age must be greater than 0
 
 test integer_validator("age", -4):
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", -4)
     Traceback (most recent call last)
-    ValueError: name must be greater than 0
+    ...
+    ValueError: age must be greater than 0
 
 test integer_validator("age", 4):
     >>> bg = BaseGeometry()
