@@ -31,7 +31,7 @@ class Rectangle(BaseGeometry):
         """
         Public method that returns rectangle area
         """
-        return (self.width * self.height)
+        return (self.__width * self.__height)
 
     def __str__(self):
         """
