@@ -35,4 +35,4 @@ class Square(Rectangle):
         """
         Print representation of Square
         """
-        print("{}/{}".format(super.__width, super.__height))
+        print("{}/{}".format(super().__width, super().__height))
