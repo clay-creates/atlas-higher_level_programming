@@ -11,7 +11,7 @@ load_from_json = __import__('6-load_from_json_file').load_from_json_file
 if __name__ == "__main__":
 
     arg_file = "args.json"
-    arg_list = load_from_json(arg_file)
+    arg_list = load_from_json("args.json", arg_file)
 
     if not isinstance(arg_list, list):
         arg_list = []
