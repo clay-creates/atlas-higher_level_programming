@@ -4,7 +4,6 @@ This module contains implementation of write_file method
 """
 
 
-
 def write_file(filename="", text=""):
     """
     Method writes to given file and gives number of characters written
