@@ -6,6 +6,7 @@ This module implements the load_from_json_file method
 
 import json
 
+
 def load_from_json_file(my_obj, filename):
     """
     Method creates an object from a JSON file
