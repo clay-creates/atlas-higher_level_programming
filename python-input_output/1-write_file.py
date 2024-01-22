@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains impolementation of write_file method
+This module contains implementation of write_file method
 """
 
 
