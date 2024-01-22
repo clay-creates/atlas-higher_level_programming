@@ -7,7 +7,7 @@ This module implements the load_from_json_file method
 import json
 
 
-def load_from_json_file(my_obj, filename):
+def load_from_json_file(filename):
     """
     Method creates an object from a JSON file
 
@@ -16,5 +16,4 @@ def load_from_json_file(my_obj, filename):
         filename (string): name of file to get json from
     """
     with open(filename, 'w', encoding='utf-8') as file:
-        my_obj = json.load(file)
-        return my_obj
+        return json.load(file)
