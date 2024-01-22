@@ -6,7 +6,7 @@ This module implements the class_to_json method
 
 def class_to_json(obj):
     """
-    Method that returns dictionary description for json serialization 
+    Method that returns dictionary description for json serialization
 
     Args:
         obj (_type_): _description_
