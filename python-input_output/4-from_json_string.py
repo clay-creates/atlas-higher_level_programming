@@ -6,6 +6,7 @@ This module implements the from_json_string method
 
 import json
 
+
 def from_json_string(my_str):
     """
     Method returns an object from a JSOn string
