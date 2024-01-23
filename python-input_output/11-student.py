@@ -36,5 +36,5 @@ class Student:
                     if hasattr(self, attr)}
 
     def reload_from_json(self, json):
-        for (key, value) in json:
+        for (first_name, last_name, age) in json:
             setattr(self, key, value)
