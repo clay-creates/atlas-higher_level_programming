@@ -187,7 +187,7 @@ class Rectangle(Base):
                 print(' ', end='')
                 for column in range(self.__width):
                     print('#', end='')
-                    for i in range(self.__y):
+                    for j in range(self.__y):
                         print(' ', end='')
             print()
 
