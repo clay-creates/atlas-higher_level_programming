@@ -182,12 +182,14 @@ class Rectangle(Base):
         """
         Funtion to display representation of rectangle
         """
-        for i in range(self.__y):
-            print(' ' * self.__x)
-        for row in range(self.__height):
-            print(' ' * self.__x + '#' * self.__width)
-        for i in range(self.__y):
-            print(' ' * self.__x)
+        for _ in range(self.y):
+            print("")
+        for _ in range(self.height):
+            for _ in range(self.x):
+                print(" ", end="")
+            for _ in range(self.width):
+                print("#", end="")
+            print("")
 
     def __str__(self):
         print("[Rectangle] ({}) {}/{} - {}/{}".format
