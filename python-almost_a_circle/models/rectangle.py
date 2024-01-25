@@ -183,8 +183,12 @@ class Rectangle(Base):
         Funtion to display representation of rectangle
         """
         for row in range(self.__height):
-            for column in range(self.__width):
-                print('#', end='')
+            for i in range(self.__x):
+                print(' ', end='')
+                for column in range(self.__width):
+                    print('#', end='')
+                    for i in range(self.__y):
+                        print(' ', end='')
             print()
 
     def __str__(self):
