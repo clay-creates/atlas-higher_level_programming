@@ -40,7 +40,7 @@ class Rectangle(Base):
         """
         return self.__width
 
-    @width.getter
+    @width.setter
     def width(self, value):
         """
         Setter for width attribute
