@@ -188,7 +188,6 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
         for i in range(self.__y):
             print(' ' * self.__x)
-        print()
 
     def __str__(self):
         print("[Rectangle] ({}) {}/{} - {}/{}".format
