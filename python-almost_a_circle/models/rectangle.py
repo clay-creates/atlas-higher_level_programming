@@ -2,7 +2,7 @@
 """
 This module contains the Rectangle class, inheriting from Base
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -139,3 +139,22 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def area(self):
+        """
+        Funtion to get area of rectangle
+
+        Returns:
+            int: return area of rectangle
+        """
+        return self.__width * self.__height
+
+    def display(self):
+        for row in range(self.__height):
+            for column in range(self.__width):
+                print('#', end='')
+            print()
+
+    def __str__(self):
+        print("[Rectangle] ({}) {}/{} - {}/{}".format
+              (self.id, self.__x, self.__y, self.__width, self.__height))
