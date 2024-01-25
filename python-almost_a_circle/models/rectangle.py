@@ -22,7 +22,7 @@ class Rectangle(Base):
             height (int): height of rectangle
             x (int, optional): horizontal position. Defaults to 0.
             y (int, optional): vertical position. Defaults to 0.
-            id (int, optional): id number of rectangle instance. Defaults to None.
+            id (int, optional): id number of instance. Defaults to None.
         """
         super().__init__(id)
         self.__width = width
