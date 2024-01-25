@@ -6,6 +6,12 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """
+    Implementation of Rectangle class
+
+    Args:
+        Base (class): parent class to Rectangle
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
