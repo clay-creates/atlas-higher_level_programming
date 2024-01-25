@@ -16,7 +16,7 @@ class Base:
         Initialization of Base class
 
         Args:
-            id (int, optional): unique identifier of instance. Defaults to None.
+            id (int): unique identifier of instance. Defaults to None.
         """
         if id is not None:
             self.id = id
