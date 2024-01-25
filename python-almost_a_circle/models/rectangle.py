@@ -179,6 +179,9 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """
+        Funtion to display representation of rectangle
+        """
         for row in range(self.__height):
             for column in range(self.__width):
                 print('#', end='')
