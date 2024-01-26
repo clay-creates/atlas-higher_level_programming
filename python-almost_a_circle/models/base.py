@@ -38,6 +38,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """
         Writes the JSON string representation of 'list_objs' to a file
@@ -49,9 +50,9 @@ class Base:
 
         if not list_objs:
             list_objs = []
-        else:
-            for object in list_objs:
-                list_objs.append(object.to_dictionary())
+
+        list_objs = [object.to_dictionary() for object in list_objs]
+        json_string = cls.to_json_string(list_objs)
 
         with open(filename, 'w') as file:
-            file.write(cls.to_json_string(list_objs))
+            file.write(json_string)
