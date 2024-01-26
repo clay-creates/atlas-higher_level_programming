@@ -195,12 +195,15 @@ class Rectangle(Base):
         print("[Rectangle] ({}) {}/{} - {}/{}".format
               (self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Function to update values of attribute
         """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        if args is not None:
+            for i, arg in enumerate(args):
+                setattr(self, attributes[i], arg)
+        else:
+            for attr, value in kwargs.items():
+                if attr in attributes:
+                    setattr(self, attr, value)
