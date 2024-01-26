@@ -200,10 +200,10 @@ class Rectangle(Base):
         Function to update values of attribute
         """
         attributes = ['id', 'width', 'height', 'x', 'y']
-        if args is not None:
+        if args:
             for i, arg in enumerate(args):
                 setattr(self, attributes[i], arg)
-        else:
+        elif kwargs:
             for attr, value in kwargs.items():
                 if attr in attributes:
                     setattr(self, attr, value)
