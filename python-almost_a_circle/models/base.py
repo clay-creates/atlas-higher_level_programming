@@ -35,4 +35,4 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         else:
-            return list_dictionaries.__dict__
+            return list_dictionaries.__str__
