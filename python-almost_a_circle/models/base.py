@@ -73,3 +73,12 @@ class Base:
 
         list_of_dicts = json.loads(json_string)
         return list_of_dicts
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set
+        """
+        instance = cls()
+        instance.update(**dictionary)
+        return instance
