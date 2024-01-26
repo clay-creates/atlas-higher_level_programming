@@ -196,6 +196,9 @@ class Rectangle(Base):
               (self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args):
+        """
+        Function to update values of attribute
+        """
         self.id = args[0]
         self.width = args[1]
         self.height = args[2]
