@@ -14,13 +14,7 @@ class Square(Rectangle):
     """
 
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(id, size, size, x, y)
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size <= 0:
-            raise ValueError("size must be > 0")
-        else:
-            self.size = size
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         print("[Square] ({}) {}/{} - {}".format
