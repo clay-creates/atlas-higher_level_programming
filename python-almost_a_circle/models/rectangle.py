@@ -209,3 +209,11 @@ class Rectangle(Base):
             for attr, value in kwargs.items():
                 if attr in attributes:
                     setattr(self, attr, value)
+
+    def to_dictionary(self):
+        attr_dict = {}
+        attr_dict.update(getattr(self.id))
+        attr_dict.update(getattr(self.width))
+        attr_dict.update(getattr(self.height))
+        attr_dict.update(getattr(self.x))
+        attr_dict.update(getattr(self.y))
