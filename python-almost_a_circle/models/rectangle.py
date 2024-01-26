@@ -211,6 +211,9 @@ class Rectangle(Base):
                     setattr(self, attr, value)
 
     def to_dictionary(self):
+        """
+        Funtion to put Rectangle attributes in dictionary
+        """
         attr_dict = {}
         attr_dict.update(getattr(self.id))
         attr_dict.update(getattr(self.width))
