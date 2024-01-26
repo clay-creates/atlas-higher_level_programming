@@ -32,7 +32,7 @@ class Base:
         Args:
             list_dictionaries (list): list of dictionaries
         """
-        if list_dictionaries is None:
+        if not list_dictionaries:
             return "[]"
         else:
             return list_dictionaries.__str__
