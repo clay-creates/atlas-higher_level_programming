@@ -215,10 +215,10 @@ class Rectangle(Base):
         Funtion to put Rectangle attributes in dictionary
         """
         attr_dict = {}
-        attr_dict.update(getattr(self.id))
-        attr_dict.update(getattr(self.width))
-        attr_dict.update(getattr(self.height))
-        attr_dict.update(getattr(self.x))
-        attr_dict.update(getattr(self.y))
+        attr_dict['id'] = getattr(self, 'id')
+        attr_dict['width'] = getattr(self, 'width')
+        attr_dict['height'] = getattr(self, 'height')
+        attr_dict['x'] = getattr(self, 'x')
+        attr_dict['y'] = getattr(self, 'y')
 
         return attr_dict
