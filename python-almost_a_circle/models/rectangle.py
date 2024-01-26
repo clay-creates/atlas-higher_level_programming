@@ -220,3 +220,5 @@ class Rectangle(Base):
         attr_dict.update(getattr(self.height))
         attr_dict.update(getattr(self.x))
         attr_dict.update(getattr(self.y))
+
+        return attr_dict
