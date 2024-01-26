@@ -18,8 +18,8 @@ class Base:
         Args:
             id (int): unique identifier of instance. Defaults to None.
         """
-        Base.__nb_objects += 1
         if id is not None:
             self.id = id
         else:
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
