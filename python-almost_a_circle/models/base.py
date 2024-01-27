@@ -79,6 +79,9 @@ class Base:
         """
         Returns an instance with all attributes already set
         """
-        instance = cls()
-        instance.update(**dictionary)
-        return instance
+        if isinstance(type(cls), Rectangle):
+            new_inst = cls(1, 1)
+        if isinstance(type(cls), Square):
+            new_inst = cls(1)
+        new_inst.update(**dictionary)
+        return new_inst
