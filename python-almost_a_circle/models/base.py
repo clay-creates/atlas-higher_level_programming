@@ -81,9 +81,9 @@ class Base:
         """
         Returns an instance with all attributes already set
         """
-        if isinstance(cls, Rectangle):
+        if cls.__name__ ==  "Rectangle":
             new_inst = cls(1, 1)
-        if isinstance(cls, Square):
+        if cls.__name__ == "Square":
             new_inst = cls(1)
         new_inst.update(**dictionary)
         return new_inst
