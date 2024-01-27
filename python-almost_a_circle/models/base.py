@@ -2,7 +2,8 @@
 """
 This module defines the Base class
 """
-import json, os
+import json
+import os
 
 
 class Base:
@@ -101,6 +102,6 @@ class Base:
 
         list_of_dicts = cls.from_json_string(json_string)
         list_of_instances = [cls.create(**dictionary) 
-                             for dictionary in list_of_dicts]
+                            for dictionary in list_of_dicts]
 
         return list_of_instances
