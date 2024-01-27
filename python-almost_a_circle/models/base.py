@@ -2,7 +2,7 @@
 """
 This module defines the Base class
 """
-import json
+import json, os
 
 
 class Base:
@@ -85,3 +85,21 @@ class Base:
             new_inst = cls(1)
         new_inst.update(**dictionary)
         return new_inst
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances
+        """
+        filename = "{}.json".format(cls.__name__)
+
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r') as file:
+            json_string = file.read()
+
+        list_of_dicts = cls.from_json_string(json_string)
+        list_of_instances = [cls.create(**dictionary) for dictionary in list_of_dicts]
+
+        return list_of_instances
