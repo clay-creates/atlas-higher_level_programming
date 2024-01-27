@@ -3,8 +3,6 @@
 This module defines the Base class
 """
 import json
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class Base:
