@@ -101,6 +101,6 @@ class Base:
             json_string = file.read()
 
         list_of_dicts = cls.from_json_string(json_string)
-        list_inst = [cls.create(**dict) for dictionary in list_of_dicts]
+        list_inst = [cls.create(**dictionary) for dictionary in list_of_dicts]
 
         return list_inst
