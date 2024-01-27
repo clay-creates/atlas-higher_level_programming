@@ -100,6 +100,7 @@ class Base:
             json_string = file.read()
 
         list_of_dicts = cls.from_json_string(json_string)
-        list_of_instances = [cls.create(**dictionary) for dictionary in list_of_dicts]
+        list_of_instances = [cls.create(**dictionary) 
+                             for dictionary in list_of_dicts]
 
         return list_of_instances
