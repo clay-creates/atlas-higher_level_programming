@@ -6,7 +6,6 @@ import unittest
 import os
 import io
 import sys
-sys.path.append(os.path.abspath('/workspaces/atlas-higher_level_programming/python-almost_a_circle/models'))
 from models.base import Base
 
 
