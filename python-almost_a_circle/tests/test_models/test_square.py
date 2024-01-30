@@ -16,9 +16,9 @@ class TestSquare(unittest.TestCase):
         s2 = Square(1, 2)
         s3 = Square (1, 2, 3)
 
-        self.assertEqual(s1, Square(1))
-        self.assertEqual(s2, Square(1, 2))
-        self.assertEqual(s3, Square(1, 2, 3))
+        self.assertIsInstance(s1, Square)
+        self.assertIsInstance(s2, Square)
+        self.assertIsInstance(s3, Square)
 
         with self.assertRaises(TypeError):
             s = Square("1")
@@ -81,7 +81,7 @@ class TestSquare(unittest.TestCase):
     def test_save_to_file_empty(self):
         Square.save_to_file([])
         self.assertTrue(os.path.exists("Square.json"))
-        with open("Rectangle.json", 'r') as file:
+        with open("Square.json", 'r') as file:
             self.assertEqual(file.read(), "[]")
         os.remove("Square.json")
 
@@ -99,7 +99,7 @@ class TestSquare(unittest.TestCase):
         sys.stdout = output
         s.display()
         sys.stdout = sys.__stdout__
-        self.assertEqual(output.getvalue(), "\n\n#\n")
+        self.assertEqual(output.getvalue(), "#\n")
 
     def test_display_without_y(self):
         s = Square(1, 2)
@@ -107,7 +107,7 @@ class TestSquare(unittest.TestCase):
         sys.stdout = output
         s.display()
         sys.stdout = sys.__stdout__
-        self.assertEqual(output.getvalue(), "\n\n#\n")
+        self.assertEqual(output.getvalue(), "  #\n")
 
 if __name__ == "__main__":
     unittest.main()

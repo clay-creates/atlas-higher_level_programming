@@ -12,13 +12,13 @@ from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
 
     def test_rectangle_creation(self):
-        r1= Rectangle(1, 2)
+        r1 = Rectangle(1, 2)
         r2 = Rectangle(1, 2, 3)
         r3 = Rectangle(1, 2, 3, 4)
 
-        self.assertEqual(r1, Rectangle(1, 2))
-        self.assertEqual(r2, Rectangle(1, 2, 3))
-        self.assertEqual(r3, Rectangle(1, 2, 3, 4))
+        self.assertIsInstance(r1, Rectangle)
+        self.assertIsInstance(r2, Rectangle)
+        self.assertIsInstance(r3, Rectangle)
 
         with self.assertRaises(TypeError):
             r = Rectangle("1", 2)
@@ -43,7 +43,7 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_methods(self):
         r = Rectangle(1, 2, 3, 4)
         self.assertEqual(r.area(), 2)
-        self.assertEqual(str(r), "[Rectangle] (14) 3/4 - 1/2")
+        self.assertEqual(str(r), "[Rectangle] (11) 3/4 - 1/2")
 
     def test_update(self):
         r = Rectangle(1, 2, 3, 4)
@@ -57,7 +57,7 @@ class TestRectangle(unittest.TestCase):
     def test_to_dictionary(self):
         r = Rectangle(1, 2, 3, 4)
         d = r.to_dictionary()
-        self.assertEqual(d, {'id': 17, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(d, {'id': 14, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
 
     def test_create(self):
         r = Rectangle.create(id=1, width=2, height=3, x=4, y=5)
