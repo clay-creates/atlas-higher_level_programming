@@ -12,13 +12,12 @@ from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
 
     def test_rectangle_creation(self):
-        r1 = Rectangle(1, 2)
-        r2 = Rectangle(1, 2, 3)
-        r3 = Rectangle(1, 2, 3, 4)
-
-        self.assertIsInstance(r1, Rectangle)
-        self.assertIsInstance(r2, Rectangle)
-        self.assertIsInstance(r3, Rectangle)
+        r = Rectangle(1, 2)
+        self.assertIsInstance(r, Rectangle)
+        r = Rectangle(1, 2, 3)
+        self.assertIsInstance(r, Rectangle)
+        r = Rectangle(1, 2, 3, 4)
+        self.assertIsInstance(r, Rectangle)
 
         with self.assertRaises(TypeError):
             r = Rectangle("1", 2)
