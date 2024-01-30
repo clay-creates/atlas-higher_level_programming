@@ -16,6 +16,10 @@ class TestSquare(unittest.TestCase):
         s2 = Square(1, 2)
         s3 = Square (1, 2, 3)
 
+        self.assertEqual(s1, Square(1))
+        self.assertEqual(s2, Square(1, 2))
+        self.assertEqual(s3, Square(1, 2, 3))
+
         with self.assertRaises(TypeError):
             s = Square("1")
         with self.assertRaises(TypeError):
@@ -62,9 +66,23 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.y, 4)
 
     def test_save_to_file(self):
-        s= Square(1, 2, 3, 4)
+        s = Square(1, 2, 3, 4)
         Square.save_to_file([s])
         self.assertTrue(os.path.exists("Square.json"))
+        os.remove("Square.json")
+
+    def test_save_to_file_none(self):
+        Square.save_to_file(None)
+        self.assertTrue(os.path.exists("Square.json"))
+        with open("Square.json", 'r') as file:
+            self.assertEqual(file.read(), "[]")
+        os.remove("Square.json")
+
+    def test_save_to_file_empty(self):
+        Square.save_to_file([])
+        self.assertTrue(os.path.exists("Square.json"))
+        with open("Rectangle.json", 'r') as file:
+            self.assertEqual(file.read(), "[]")
         os.remove("Square.json")
 
     def test_load_from_file(self):
@@ -74,6 +92,22 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(len(loaded), 1)
         self.assertEqual(loaded[0].id, s.id)
         os.remove("Square.json")
+
+    def test_display_without_xy(self):
+        s = Square(1)
+        output = io.StringIO()
+        sys.stdout = output
+        s.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(output.getvalue(), "\n\n#\n")
+
+    def test_display_without_y(self):
+        s = Square(1, 2)
+        output = io.StringIO()
+        sys.stdout = output
+        s.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(output.getvalue(), "\n\n#\n")
 
 if __name__ == "__main__":
     unittest.main()
