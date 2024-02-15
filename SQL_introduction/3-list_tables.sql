@@ -1,0 +1,2 @@
+-- LIST TABLES
+LIST * TABLES IN mysql;
