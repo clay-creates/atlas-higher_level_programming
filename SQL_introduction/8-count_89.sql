@@ -1,0 +1,2 @@
+-- DISPLAY RECORDS WITH ID 89
+SELECT * IN first_table WHERE id=89;
