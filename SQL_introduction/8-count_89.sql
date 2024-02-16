@@ -1,2 +1,2 @@
 -- DISPLAY RECORDS WITH ID 89
-SELECT * IN first_table WHERE id=89;
+SELECT COUNT(*) FROM first_table WHERE id=89;
