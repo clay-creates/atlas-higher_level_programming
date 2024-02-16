@@ -1,2 +1,2 @@
 -- LIST VALUES
-SHOW ROWS IN first_table;
+SHOW ROWS first_table;
