@@ -9,11 +9,11 @@ import sys
 
 if __name__ == "__main__":
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    un = sys.argv[1]
+    pw = sys.argv[2]
+    base = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    db = MySQLdb.connect(host="localhost", port=3306, user=un, passwd=pw, db=base)
 
     cursor = db.cursor()
 
@@ -21,7 +21,6 @@ if __name__ == "__main__":
 
     for row in cursor.fetchall():
         print(row)
-
 
     cursor.close()
     db.close()
