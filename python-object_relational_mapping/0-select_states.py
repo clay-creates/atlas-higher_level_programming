@@ -13,7 +13,7 @@ if __name__ == "__main__":
     pw = sys.argv[2]
     base = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=un, passwd=pw, db=base)
+    db = MySQLdb.connect(host="localhost", user=un, passwd=pw, db=base)
 
     cursor = db.cursor()
 
