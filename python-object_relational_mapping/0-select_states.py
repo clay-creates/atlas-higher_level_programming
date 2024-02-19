@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 
 """
 Script to list all states using MySQLdb
 """
+
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
 
