@@ -4,6 +4,9 @@ import MySQLdb
 import sys
 
 def main():
+    """
+    Opening point for mapping using MySQLLdb
+    """
     if len(sys.argv) != 4:
         print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
         sys.exit(1)
