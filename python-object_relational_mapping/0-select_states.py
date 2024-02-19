@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-
 import MySQLdb
 import sys
 
-def main():
-    """
-    Opening point for mapping using MySQLLdb
-    """
-    if len(sys.argv) != 4:
-        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
-        sys.exit(1)
+"""
+Script to list all states using MySQLdb
+"""
+
+if __name__ == "__main__":
 
     username = sys.argv[1]
     password = sys.argv[2]
@@ -19,7 +16,7 @@ def main():
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     for row in cursor.fetchall():
         print(row)
@@ -27,7 +24,3 @@ def main():
 
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    main()
