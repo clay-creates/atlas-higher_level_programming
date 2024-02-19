@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     cursor.execute(
         """SELECT * FROM states
-        WHERE BINARY states.name
+        WHERE states.name
         LIKE 'N%'
         ORDER BY states.id ASC"""
         )
