@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Display all values in states where name matches argument, safe from SQL injections, using MySQLdb
+Display all values in states where name matches argument, 
+safe from SQL injections, using MySQLdb
 """
 
 import MySQLdb
