@@ -17,7 +17,10 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=usr, passwd=pw, db=database)
     cursor = db.cursor()
 
-    query = """SELECT * FROM cities
+    query = """SELECT cities.id, cities.name, states.name
+    FROM cities
+    JOIN states
+    ON states.id = cities.state_id
     ORDER BY cities.id ASC"""
 
     cursor.execute(query)
