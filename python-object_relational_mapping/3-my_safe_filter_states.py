@@ -22,7 +22,7 @@ if __name__ == "__main__":
     WHERE BINARY name = %s
     ORDER BY states.id ASC"""
 
-    cursor.execute(query, (state))
+    cursor.execute(query, (state,))
     for r in cursor.fetchall():
         print(r)
 
