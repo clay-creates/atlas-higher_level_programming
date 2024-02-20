@@ -18,7 +18,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=usr, passwd=pw, db=database)
     cursor = db.cursor()
 
-    query = """SELECT cities.id, cities.name
+    query = """SELECT cities.name
     FROM cities
     JOIN states
     ON states.id = cities.state_id
@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     cursor.execute(query, (state,))
     for r in cursor.fetchall():
-        print(r)
+        print(r[0])
 
     cursor.close()
     db.close()
