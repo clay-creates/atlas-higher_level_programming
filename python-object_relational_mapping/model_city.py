@@ -11,6 +11,12 @@ from model_state import Base
 
 
 class City(Base):
+    """
+    City class -> Base
+
+    Args:
+        Base (class): declarative_base
+    """
     __tablename__ = "cities"
     id = Column('id', Integer, primary_key=True, autoincrement=True)
     name = Column('name', String(128), nullable=False)
