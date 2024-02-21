@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Prints first State object from database, using SQLAlchemy
+Prints all State objects containing 'a', using SQLAlchemy
 """
 
 from model_state import Base, State
