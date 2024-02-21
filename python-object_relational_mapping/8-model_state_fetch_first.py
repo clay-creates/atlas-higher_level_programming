@@ -25,5 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     results = session.query(State).order_by(State.id).first()
-    for r in results:
-        print("{}: {}".format(r.id, r.name))
+    if results is None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(results.id, results.name))
