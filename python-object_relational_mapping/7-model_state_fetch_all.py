@@ -14,8 +14,9 @@ if __name__ == "__main__":
     usr = sys.argv[1]
     pwd = sys.argv[2]
     dbs = sys.argv[3]
+    host = "localhost"
 
-    connection = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(usr, pwd, dbs)
+    connection = "mysql+mysqldb://{}:{}@{}:3306/{}".format(usr, pwd, host, dbs)
 
     engine = create_engine(connection)
 
