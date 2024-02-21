@@ -25,8 +25,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).where(State.name == searchname).all()
+    results = session.query(State).where(State.name == searchname).one_or_none()
     if results is None:
         print("Not found")
     else:
-        print("{}".format(results.id))
+        print(results.id)
