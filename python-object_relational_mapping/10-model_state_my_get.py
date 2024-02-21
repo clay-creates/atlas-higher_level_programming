@@ -14,7 +14,7 @@ if __name__ == "__main__":
     usr = sys.argv[1]
     pwd = sys.argv[2]
     dbs = sys.argv[3]
-    searchname = sys.argv[4]
+    state = sys.argv[4]
     host = "localhost"
     url = "mysql+mysqldb"
 
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).where(State.name == searchname).one_or_none()
+    results = session.query(State).where(State.name == state).one_or_none()
     if results is None:
         print("Not found")
     else:
