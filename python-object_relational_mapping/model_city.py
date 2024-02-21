@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Define City class -> Base,
+Define City class -> Base with ForeignKey to states.id,
 using SQLAlchemy
 """
 

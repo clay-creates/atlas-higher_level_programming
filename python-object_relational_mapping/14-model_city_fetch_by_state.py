@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Prints all City objects, using SQLAlchemy
+Prints all City objects using state and Foreign key link,
+using SQLAlchemy
 """
 
 from model_state import Base, State
