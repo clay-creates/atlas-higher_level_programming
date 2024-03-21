@@ -1,4 +1,4 @@
 #!/usr/bin/node
 
-let multi = 'C is fun</ br>Python is cool</ br>JavaScript is amazing'
+let multi = 'C is fun\n Python is cool\n JavaScript is amazing'
 console.log(multi)
