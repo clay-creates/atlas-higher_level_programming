@@ -7,11 +7,11 @@ const sizeInt = parseInt(size, 10);
 if (isNaN(sizeInt)) {
   console.log('Missing size');
 } else {
-  const x = 0;
-  while (x < size) {
+  for (let y = 0; y < sizeInt; y++) {
+    let line = '';
     for (let y = 0; y < sizeInt; y++) {
-      console.log('X');
+      line += 'X';
     }
-    console.log('\n');
+    console.log(line);
   }
 }
