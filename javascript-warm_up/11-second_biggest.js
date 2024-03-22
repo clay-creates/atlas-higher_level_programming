@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const args = process.argv.slice(2);
-let biggest = -Infinity;
+let biggest = 0;
 let secondBiggest = 0;
 
 if (args.length < 2) {
