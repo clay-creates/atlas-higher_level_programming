@@ -18,3 +18,5 @@ for (let i = 0; i < args.length; i++) {
     secondBiggest = num;
   }
 }
+
+console.log(secondBiggest);
