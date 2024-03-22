@@ -6,6 +6,7 @@ let secondBiggest = 0;
 
 if (args.length < 2) {
   console.log('0');
+  process.exit(0);
 }
 
 for (let i = 0; i < args.length; i++) {
