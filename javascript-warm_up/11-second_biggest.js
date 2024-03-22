@@ -2,7 +2,7 @@
 
 const args = process.argv.slice(2);
 let biggest = -Infinity;
-let secondBiggest = -Infinity;
+let secondBiggest = 0;
 
 if (args.length < 2) {
   console.log('0');
