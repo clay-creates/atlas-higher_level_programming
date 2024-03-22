@@ -2,10 +2,10 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (!Number.isInteger(w) || w <= 0) {
+    if (w < 1) {
       typeof (w) === 'undefined';
     }
-    if (!Number.isInteger(h) || h <= 0) {
+    if (h < 1) {
       typeof (h) === 'undefined';
     }
     this.width = w;
