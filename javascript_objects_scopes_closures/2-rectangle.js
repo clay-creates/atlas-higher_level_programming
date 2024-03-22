@@ -2,9 +2,7 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (w < 1 || typeof (w) === 'undefined') {
-    }
-    if (h < 1 || typeof (h) === 'undefined') {
+    if (w < 1 || typeof (w) === 'undefined' || h < 1 || typeof (h) === 'undefined') {
     } else {
       this.width = w;
       this.height = h;
