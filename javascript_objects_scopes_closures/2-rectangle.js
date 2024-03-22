@@ -5,9 +5,10 @@ class Rectangle {
     if (w < 1 || typeof (w) === 'undefined') {
     }
     if (h < 1 || typeof (h) === 'undefined') {
+    } else {
+      this.width = w;
+      this.height = h;
     }
-    this.width = w;
-    this.height = h;
   }
 }
 
