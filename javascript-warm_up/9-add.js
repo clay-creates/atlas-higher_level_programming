@@ -8,3 +8,5 @@ function add (a, b) {
   b = arg2;
   console.log(`${a + b}`);
 }
+
+add();
