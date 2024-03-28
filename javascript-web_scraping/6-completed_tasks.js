@@ -15,6 +15,9 @@ exports.tasksCompleted = function () {
 
     completedTasks.forEach(task => {
       const userId = task.userId;
+      if (!completedTasksByUser[userId]) {
+        completedTasksByUser[userId] = 0;
+      }
       completedTasksByUser[userId]++;
     });
     for (const userId in completedTasksByUser) {
