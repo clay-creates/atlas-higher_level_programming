@@ -3,12 +3,13 @@
 const request = require('request');
 
 const movieID = process.argv[2];
-const apiPath = 'https://swapi-api.hbtn.io/api/films/:id';
+const apiPathRequest = 'https://swapi-api.hbtn.io/api/films/:id' + movieID;
 
-request(apiPath, function (error, response, body) {
-  if (error) {
-    console.error(error);
-  } else if (response.id === movieID) {
-    console.log(response.title);
-  }
+request(apiPathRequest, function (error, response, body) {
+    if (error) {
+        console.error(error);
+    } else {
+        const data = JSON.parse(body);
+        console.log(data.title);
+    }
 });
