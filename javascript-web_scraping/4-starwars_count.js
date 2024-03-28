@@ -17,9 +17,9 @@ request(apiPath, function (error, response, body) {
                 if (tokens === '18') {
                     count++
                 }
+                console.log(tokens);
             }
         }
-        console.log(character);
     }
     console.log(count);
 })
