@@ -23,4 +23,4 @@ exports.tasksCompleted = function () {
   });
 };
 
-tasksCompleted();
+exports.tasksCompleted();
