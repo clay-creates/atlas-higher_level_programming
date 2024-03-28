@@ -20,7 +20,9 @@ exports.tasksCompleted = function () {
       }
       completedTasksByUser[userId]++;
     });
-    console.log(`{'${userId}': ${completedTasksByUser[userId]}}`);
+    let formattedOutput = JSON.stringify(completedTasksByUser, null, 2);
+    formattedOutput = formattedOutput.replace(/"/g, "'");
+    console.log(formattedOutput);
   });
 };
 
