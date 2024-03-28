@@ -10,7 +10,6 @@ exports.tasksCompleted = function () {
       console.error(error);
       return;
     }
-    console.log(body);
     const completedTasks = body.filter(task => task.completed);
     const completedTasksByUser = {};
 
@@ -23,3 +22,5 @@ exports.tasksCompleted = function () {
     }
   });
 };
+
+tasksCompleted();
