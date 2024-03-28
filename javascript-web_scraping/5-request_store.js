@@ -14,8 +14,6 @@ request(apiPath, function (error, response, body) {
     fs.writeFile(storagePath, data, 'utf8', (err) => {
       if (err) {
         console.error(err);
-      } else {
-        console.log(`Webpage data written to ${storagePath}`);
       }
     });
   }
