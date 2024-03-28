@@ -20,5 +20,6 @@ request(apiPath, function (error, response, body) {
             }
         }
     }
+    console.log(character);
     console.log(count);
 })
