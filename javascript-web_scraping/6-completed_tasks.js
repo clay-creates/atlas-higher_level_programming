@@ -20,11 +20,12 @@ exports.tasksCompleted = function () {
       }
       completedTasksByUser[userId]++;
     });
-    let completed = {};
+    let formattedOutput = '{ ';
     for (const userId in completedTasksByUser) {
-      completed += (`'${userId}': ${completedTasksByUser[userId]},`);
+      formattedOutput += `'${userId}': ${completedTasksByUser[userId]}, `;
     }
-    console.log(completed);
+    formattedOutput = formattedOutput.slice(0, -2) + ' }';
+    console.log(formattedOutput);
   });
 };
 
