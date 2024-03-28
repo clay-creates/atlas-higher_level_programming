@@ -20,7 +20,7 @@ exports.tasksCompleted = function () {
       }
       completedTasksByUser[userId]++;
     });
-    console.log(JSON.stringify(completedTasksByUser));
+    console.log(`{'${userId}': ${completedTasksByUser[userId]}}`);
   });
 };
 
