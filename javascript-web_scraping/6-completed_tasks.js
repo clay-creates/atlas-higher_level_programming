@@ -20,11 +20,8 @@ exports.tasksCompleted = function () {
       }
       completedTasksByUser[userId]++;
     });
-    let formattedOutput = '{ ';
-    for (const userId in completedTasksByUser) {
-      formattedOutput += `'${userId}': ${completedTasksByUser[userId]}, `;
-    }
-    formattedOutput = formattedOutput.slice(0, -2) + ' }';
+    let formattedOutput = JSON.stringify(completedTasksByUser, null, 2);
+    formattedOutput = formattedOutput.replace(/"/g, "'");
     console.log(formattedOutput);
   });
 };
