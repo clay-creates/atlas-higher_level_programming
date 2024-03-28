@@ -11,14 +11,12 @@ request(apiPath, function (error, response, body) {
     console.error(error);
   } else {
     const data = JSON.parse(body);
-    return data;
-  }
-});
-
-fs.writeFile(storagePath, 'utf8', (err, data) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log(`Webpage data written to ${storagePath}`);
+    fs.writeFile(storagePath, data, 'utf8', (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`Webpage data written to ${storagePath}`);
+      }
+    });
   }
 });
